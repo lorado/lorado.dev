@@ -20,7 +20,7 @@
         <img class="mx-auto block w-52 sm:w-64" src="/img/logo-with-text.svg" alt="lorado.dev logo"/>
 
         <h1 class="mt-12 sm:mt-16 text-center font-light text-3xl sm:text-5xl">
-            Web-Entwickler Blog
+            Webentwickler Blog
         </h1>
 
         <div class="mt-6 sm:mt-8 w-full sm:rounded-lg space-y-4">
