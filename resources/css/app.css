@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-l-blue text-l-white;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .footer-icon {
+        @apply border border-l-green-dark p-3.5 rounded-full text-l-green-dark ring-l-green-dark
+            transition
+            hover:ring-2 hover:text-l-green;
+    }
+
+    .footer-icon svg {
+        fill: currentColor;
+        @apply w-6 transform transition-transform;
+    }
+
+    .footer-icon:hover svg {
+        @apply scale-125;
+    }
+}
