@@ -13,6 +13,7 @@ deploy-to-server:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - ssh-keyscan lorado.dev > ~/.ssh/known_hosts
+    - ssh-keyscan 185.244.192.121 > ~/.ssh/known_hosts
     - echo "$DEPLOYER_SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
     # create dist ordner
     - mkdir dist
