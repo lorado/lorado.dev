@@ -5,14 +5,13 @@ deploy-to-server:
     - master
   stage: deploy
   variables:
-    REMOTE_HOST: gitlab-deployer@lorado.dev
+    REMOTE_HOST: gitlab-deployer@185.244.192.121
     DEPLOY_PATH: /var/www/lorado.dev/server
   script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
     - eval $(ssh-agent -s)
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - ssh-keyscan lorado.dev > ~/.ssh/known_hosts
     - ssh-keyscan 185.244.192.121 > ~/.ssh/known_hosts
     - echo "$DEPLOYER_SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
     # create dist ordner
