@@ -32,6 +32,7 @@ deploy-to-server:
     - export DEPLOY_TIME=$(TZ="Europe/Berlin" date +%Y-%m-%d_%H:%M:%S)
     - export RELEASE_PATH=$DEPLOY_PATH/releases/$DEPLOY_TIME
     - ssh $REMOTE_HOST "mkdir -p $RELEASE_PATH"
+    - scp -r dist/* "$REMOTE_HOST:$RELEASE_PATH"
     - ssh $REMOTE_HOST "cd $RELEASE_PATH && ln -s ../../shared/.env .env"
     - ssh $REMOTE_HOST "cd $RELEASE_PATH && ln -s ../../../shared/app storage/app"
     - ssh $REMOTE_HOST "cd $RELEASE_PATH && composer install --optimize-autoloader --no-dev"
