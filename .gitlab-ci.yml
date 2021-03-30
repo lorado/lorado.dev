@@ -20,7 +20,6 @@ deploy-to-server:
     - mv bootstrap dist/bootstrap
     - mv config dist/config
     - mv database dist/database
-    - mv graphql dist/graphql
     - mv public dist/public
     - mv resources dist/resources
     - mv routes dist/routes
